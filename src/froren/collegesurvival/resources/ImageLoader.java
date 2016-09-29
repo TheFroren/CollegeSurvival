@@ -1,4 +1,4 @@
-package froren.collegesurvival;
+package froren.collegesurvival.resources;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
