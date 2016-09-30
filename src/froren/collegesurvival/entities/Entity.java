@@ -39,10 +39,11 @@ public class Entity {
 		return this;
 	}
 
-	public void destroy() {
+	public Entity destroy() {
 		synchronized (components) {
 			for (Component c : components.values())
 				c.destroy();
 		}
+		return this;
 	}
 }

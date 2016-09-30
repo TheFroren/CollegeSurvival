@@ -49,7 +49,7 @@ public class World {
 			entities.add(newEntities.pop());
 		
 		while(!deadEntities.isEmpty())
-			entities.remove(deadEntities.pop());
+			entities.remove(deadEntities.pop().destroy());
 		
 	}
 }
