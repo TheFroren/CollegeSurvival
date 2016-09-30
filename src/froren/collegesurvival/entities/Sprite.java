@@ -5,8 +5,7 @@ import java.awt.image.BufferedImage;
 import java.util.HashSet;
 import java.util.Set;
 
-import froren.collegesurvival.JPanelRenderer;
-import froren.collegesurvival.Renderer;
+import froren.collegesurvival.handlers.JPanelRenderer;
 
 public class Sprite extends Component{
 

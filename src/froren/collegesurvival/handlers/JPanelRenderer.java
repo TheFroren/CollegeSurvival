@@ -1,4 +1,4 @@
-package froren.collegesurvival;
+package froren.collegesurvival.handlers;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 import froren.collegesurvival.entities.Component;
 import froren.collegesurvival.entities.Sprite;
 
-public class JPanelRenderer extends JPanel implements Renderer{
+public class JPanelRenderer extends JPanel implements ComponentHandler{
 	private static final long serialVersionUID = 3684305562348494959L;
 	
 	private final List<Sprite> sprites = new ArrayList<>();
@@ -25,12 +25,6 @@ public class JPanelRenderer extends JPanel implements Renderer{
 		}
 	}
 
-	@Override
-	public void render() {
-		repaint();
-	}
-
-	@Override
 	public Component createRenderComponent() {
 		Sprite s = new Sprite(this);
 		
@@ -45,6 +39,12 @@ public class JPanelRenderer extends JPanel implements Renderer{
 		synchronized (sprites) {
 			sprites.remove(s);
 		}
+	}
+
+	@Override
+	public void handle(double delta) {
+		repaint();
+		
 	}
 	
 }
