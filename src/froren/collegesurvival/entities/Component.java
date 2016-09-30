@@ -1,5 +1,6 @@
 package froren.collegesurvival.entities;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -9,7 +10,7 @@ public abstract class Component {
 	protected static final Set<Class<? extends Component>> NO_DEPENDENCIES = new HashSet<>(0);
 	
 	protected Entity entity;
-	protected Map<Class<? extends Component>, Component> linkedDependencies;
+	protected Map<Class<? extends Component>, Component> linkedDependencies = new HashMap<>();
 	
 	public abstract void invoke(double delta);
 	public abstract void destroy();

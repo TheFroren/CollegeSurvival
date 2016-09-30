@@ -12,7 +12,7 @@ public class Sprite extends Component{
 	private static final Set<Class<? extends Component>> DEPENDENCIES = new HashSet<>();
 	
 	static{
-		DEPENDENCIES.add(Position.class);
+		DEPENDENCIES.add(Spatial.class);
 	}
 	
 	private final JPanelRenderer renderer;
@@ -37,7 +37,7 @@ public class Sprite extends Component{
 	
 	@Override
 	public void invoke(double delta) {
-		Position pos = (Position) linkedDependencies.get(Position.class);
+		Spatial pos = (Spatial) linkedDependencies.get(Spatial.class);
 		
 		transform.setToRotation(pos.angle);
 		transform.translate(pos.x - (sprite.getWidth()*0.5), pos.y - (sprite.getHeight()*0.5));

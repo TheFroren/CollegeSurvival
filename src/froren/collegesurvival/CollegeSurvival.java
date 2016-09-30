@@ -3,12 +3,11 @@ package froren.collegesurvival;
 import javax.swing.JFrame;
 
 public class CollegeSurvival extends JFrame{
+	private static final long serialVersionUID = -5140223176918431066L;
 	
 	static final String TITLE = "College Survival v2";
 	
 	private void run(){
-		
-		
 		
 		
 		

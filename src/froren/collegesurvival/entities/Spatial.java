@@ -2,21 +2,29 @@ package froren.collegesurvival.entities;
 
 import java.util.Set;
 
-public class Position extends Component {	
+public class Spatial extends Component {	
 	
 	public double
 		x,
 		y,
-		angle;
+		angle,
+		vx,
+		vy,
+		radius;
 	
-	public Position(double x, double y, double angle) {
+	public Spatial(double x, double y, double angle, double vx, double vy, double radius) {
 		this.x = x;
 		this.y = y;
 		this.angle = angle;
+		this.vx = vx;
+		this.vy = vy;
+		this.radius = radius;
 	}
 
 	@Override
 	public void invoke(double delta) {
+		x += vx*delta;
+		y += vy*delta;
 	}
 
 	@Override
